@@ -34,8 +34,8 @@ public class DailyPlanner {
                 System.out.println();
             break;
             case 1:
-//                DailyTask task = new DailyTask(title, description, taskType, localDateTime);
-//                actualTask.put(task.getId(), task);
+                DailyTask task = new DailyTask(title, description, taskType, localDateTime);
+                actualTask.put(task.getId(), task);
                 System.out.println("1");
 
                 break;
