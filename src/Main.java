@@ -13,6 +13,8 @@ public class Main {
                     case 1:
                         DailyPlanner.addTask(scanner);
                         break;
+                    case 2:
+                        System.out.println(Task);
 //                    case 2:
 //                        DailyPlanner.deleteTask(scanner);
 //                        break;

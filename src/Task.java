@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public abstract class Task {
     private String title;
@@ -76,4 +77,29 @@ public abstract class Task {
     }
 
     public abstract boolean checkOccurrence(LocalDateTime requestedDate);
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Task task = (Task) o;
+        return archived == task.archived && title.equals(task.title) && description.equals(task.description) && taskType == task.taskType && firstDate.equals(task.firstDate) && id.equals(task.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, description, taskType, firstDate, archived, id);
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", taskType=" + taskType +
+                ", firstDate=" + firstDate +
+                ", archived=" + archived +
+                ", id=" + id +
+                '}';
+    }
 }
