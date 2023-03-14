@@ -1,6 +1,6 @@
 import java.time.LocalDateTime;
 
-public class WeeklyTask extends Task{
+public class WeeklyTask extends Task implements Repeatability{
     protected WeeklyTask(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
         super(title, description, taskType, localDateTime);
     }
