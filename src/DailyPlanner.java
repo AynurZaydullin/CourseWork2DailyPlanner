@@ -19,7 +19,7 @@ public class DailyPlanner {
         TaskType taskType = TaskType.values()[scanner.nextInt()];
         System.out.println("Введите дату в формате: dd.MM.yyyy HH:mm");
         String data = scanner.nextLine();
-        LocalDateTime eventDate = LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"));
+        LocalDateTime eventDate = LocalDateTime.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
         DailyTask dailyTask = new DailyTask(title, description, taskType, eventDate);
         Repeatability task = null;
         createTask(occurrence, title, description, taskType, eventDate);
@@ -54,7 +54,7 @@ public class DailyPlanner {
     public static List<Repeatability> findTasksByDate(Scanner scanner) {
         System.out.println("Введите дату в формате: dd.MM.yyyy");
         String date = scanner.next();
-        LocalDateTime data = LocalDateTime.parse(date, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        LocalDateTime data = LocalDateTime.parse(date, DateTimeFormatter.ofPattern("dd.MM"));
         List<Repeatability> tasks = new ArrayList<>();
         for (Repeatability task : actualTask.values()) {
             if (task.checkOccurrence(data)) {
