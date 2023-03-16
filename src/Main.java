@@ -14,7 +14,7 @@ public class Main {
                         DailyPlanner.addTask(scanner);
                         break;
                     case 2:
-                        DailyPlanner.findTasksByDate(scanner);
+                        DailyPlanner.getTasksByDay(scanner);
 //                    case 2:
 //                        DailyPlanner.deleteTask(scanner);
 //                        break;
