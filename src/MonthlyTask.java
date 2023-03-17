@@ -1,7 +1,7 @@
 import java.time.LocalDateTime;
 
-public class MonthlyTask extends Task{
-    protected MonthlyTask(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
+public class MonthlyTask extends Task implements Repeatability{
+    protected MonthlyTask(String title, String description, TaskType taskType, LocalDateTime localDateTime)throws WrongInputException {
         super(title, description, taskType, localDateTime);
     }
 

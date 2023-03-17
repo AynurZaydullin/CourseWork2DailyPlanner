@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 
 public class OnceTask extends Task implements Repeatability{
 
-    protected OnceTask(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
+    protected OnceTask(String title, String description, TaskType taskType, LocalDateTime localDateTime) throws WrongInputException {
         super(title, description, taskType, localDateTime);
     }
 

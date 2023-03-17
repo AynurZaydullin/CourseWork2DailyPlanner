@@ -13,12 +13,17 @@ public class Main {
                     case 1:
                         DailyPlanner.addTask(scanner);
                         break;
-                    case 2:
-                        DailyPlanner.getTasksByDay(scanner);
 //                    case 2:
-//                        DailyPlanner.deleteTask(scanner);
+//                        DailyPlanner.editTask(scanner);
+                    case 2:
+                        DailyPlanner.deleteTask(scanner);
+                        break;
+                    case 3:
+                        DailyPlanner.getTasksByDay(scanner);
+//                    case 5:
+//                        DailyPlanner.printArchivedTask();
 //                        break;
-//                    case 3:
+//                    case 6:
 //                        DailyPlanner.getGroupByDate();
 //                        break;
                     case 0:
@@ -39,7 +44,10 @@ public class Main {
 
     private static void printMenu() {
         System.out.println(
-                "1. Добавить задачу  2. Удалить задачу 3. Получить задачу на указанный день 0. Выход"
+                "1. Добавить задачу \n" +
+                        "2. Удалить задачу \n" +
+                        "3. Получить задачу на указанный день \n" +
+                        "0. Выход\n"
         );
     }
 }

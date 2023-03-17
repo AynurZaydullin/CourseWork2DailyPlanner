@@ -11,12 +11,13 @@ public abstract class Task {
     private final Integer id;
 
     //Создание задачи через класс.
-    protected Task(String title, String description, TaskType taskType, LocalDateTime localDateTime) {
+    protected Task(String title, String description, TaskType taskType, LocalDateTime localDateTime) throws WrongInputException {
         setTitle(title);
-        this.title = title;
-        this.description = description;
+        this.title = ValidateUtils.checkString(description);
+        this.description = ValidateUtils.checkString(description);
         this.taskType = taskType;
         this.firstDate = localDateTime;
+        this.archived = false;
         this.id = counter++;
     }
 

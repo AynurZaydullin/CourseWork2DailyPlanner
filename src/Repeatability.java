@@ -6,4 +6,6 @@ public interface Repeatability {
     void setTitle(String title);
 
     boolean checkOccurrence(LocalDateTime atStartOfDay);
+
+    void setArchived(boolean archived);
 }
