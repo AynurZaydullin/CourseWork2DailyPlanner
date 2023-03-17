@@ -68,4 +68,7 @@ public class DailyPlanner {
         }
         return tasks;
     }
+
+    public static void deleteTask(Scanner scanner) {
+    }
 }
